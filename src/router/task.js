@@ -20,7 +20,7 @@ taskRouter.post('/tasks', auth, async (req, res) => {
 
 })
 
-// Read many Tasks
+// Read many Tasks default http request is {{url}/tasks?sortBy=completed:asc
 taskRouter.get('/tasks', auth, async (req, res) => {
 
     const findFilter = { owner: req.user._id }
